@@ -261,18 +261,7 @@ function Start-CucmSession
     $perfMon = "perfMon" + $goButton
     $cucmSessionToken = "token" + $goButton
     $stopButton = $goButton -replace "Go$", "Stop"
-
-    # definitions:-
-    # Object, means of storing information. An example in powershell would be
-    #$humanBeings = @(
-    #    [PSCustomObject]@{firstName = "John", lastName = "Smith"}
-    #    [PSCustomObject]@{firstName = "Ann", lastName = "Nonnymous"}
-    #)
-    # this is the object $humanBeings, you can query it for names, add more humans
-    # remove humans etc.
-    # Method, smallish code blocks, a lot like functions. Breaks a big program
-    # into smaller methods. You execute the methods in sequence to get what you want
-        
+    
     try
     {
         # the url for the cucm perfmon web service description language (wsdl) file
@@ -283,10 +272,10 @@ function Start-CucmSession
         
         # New-WebServiceProxy contacts CUCM subscriber and returns a series of objects,
         # these can be stored in the hash table $sync and accessed by other powershell instances
-        # infact $sync is the perfect place to store any object that I want to access later
+        # infact $sync is the perfect place to store any object that you want to access later
         $sync.$perfMon = New-WebServiceProxy -Uri $urlPerfMon -Credential $creds
 
-        # Refresh the GUI Output_TxtBlk via dispatcher to updtae console mesages.
+        # Refresh the GUI Output_TxtBlk via dispatcher to update console mesages.
         # Open a session with the CUCM subscriber, be careful, everytime you access this method
         # $sync.$perfMon.perfmonOpenSession() you start another session, even if you put Value
         # on the end rather than show existing value just creates a new instance
@@ -451,7 +440,7 @@ function Start-NewRunspace ([string]$codeToExec, $goButton, $countLabel, $cucmSu
     # Add the runspace object to the powershell instance
     $newPsInstance.Runspace = $runspace
 
-    # Set the new runsapce parameters then open
+    # Set the new runspace parameters then open
     # the runspace for use
     $runspace.Name = $goButton
     #$runspace.ApartmentState = "STA"
@@ -473,7 +462,6 @@ function Start-NewRunspace ([string]$codeToExec, $goButton, $countLabel, $cucmSu
 
 #######################################################################################
 #      Function to check that the user has either entered some text in the txt        #
-#   boxes or has selected CSV and or TXT files for commands, creds and ip addresses   #
 #######################################################################################
 
 function Check-UserInput ()
@@ -604,7 +592,7 @@ $sync.myCancelButton.Add_Click({
 
 #######################################################################################
 #               This code runs when the Next 1 button is clicked                      #
-#   button 1 is the Next button. Takes you from the instructions to the dash board    #
+#   button 1 is the Next button. Takes you from the instructions to the main GUI form #
 #######################################################################################
 
 $sync.myButton1.Add_Click({
@@ -633,7 +621,7 @@ $sync.sub3Go.Add_Click({Launch-CucmSession "3"; $sync.menuItemSaveAs.IsEnabled =
 $sync.sub4Go.Add_Click({Launch-CucmSession "4"; $sync.menuItemSaveAs.IsEnabled = $true})
 
 #######################################################################################
-#               This code runs when any of the STOP Button are clicked                #
+#               This code runs when any of the STOP Buttons are clicked               #
 #######################################################################################
 
 $sync.sub1Stop.Add_Click({Halt-CucmSession "1"})
