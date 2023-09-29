@@ -9,7 +9,7 @@ Change lines 72 to 75 in the script to the IP addresses for up to four CUCM serv
 
 ## Installation
 
-Click on the link for the script above. When the PowerShell code page appears click the **Download Raw file** button top right. Once downloaded to your computer have a read of the script in your prefered editor. All the information for executing he script will be in the script synopsis.
+Click on the link for the script above. When the PowerShell code page appears click the **Download Raw file** button top right. Once downloaded to your computer have a read of the script in your prefered editor. All the information for executing the script will be in the script synopsis.
 
 ## Credits and references
 
