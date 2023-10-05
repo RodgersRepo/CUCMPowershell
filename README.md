@@ -13,7 +13,7 @@ Change lines 72 to 75 in the script to the IP addresses for up to four CUCM serv
 
 Click on the link for the script above. When the PowerShell code page appears click the **Download Raw file** button top right. Once downloaded to your computer have a read of the script in your prefered editor. All the information for executing the script will be in the script synopsis.
 
-# Usage
+## Usage
 
 To execute the PowerShell scripts in this repository. Save the ps1 file to a folder on your computer, then from a powershell prompt in the same folder.
 ```sh
@@ -23,7 +23,7 @@ Change `scriptname.ps1` for the name of the script above.
 
 If your Windows enviroment permits, you could create a shortcut to the script. Paste the following line into the shortcut.
 ```sh
-powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\<PathToYourScripts>\CucmActiveCalls.ps1"
+powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\<PathToYourScripts>\scriptname.ps1"
 ```
 Then just double click the shortcut like you are starting an application. Check the correct path to the  powershell executable on your system.
 
