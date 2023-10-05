@@ -7,7 +7,7 @@ A collection of PowerShell scripts that demonstrate using REST and SOAP to inter
 **CucmActiveCalls.ps1** - Script that creates a real time season to each CUCM subscriber, then displays the active calls. For more information about the Performance Monitor API (which this script accesses), Google the term **cucm perfmon api devnet**.
 Change lines 72 to 75 in the script to the IP addresses for up to four CUCM servers executing the Call Manager service.
 
-![Figure 1 - CUCM Active calls script screen shot](/../CUCMCallMonScreeShot.png?raw=true "CUCM Active calls script screenshot")
+![Figure 1 - CUCM Active calls script screen shot](/../CUCMCallMonScreeShot.png "CUCM Active calls script screenshot")
 
 ## Installation
 
