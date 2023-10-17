@@ -12,6 +12,8 @@ Change lines 72 to 75 in the script to the IP addresses for up to four CUCM serv
 ## Installation
 
 Click on the link for the script above. When the PowerShell code page appears click the **Download Raw file** button top right. Once downloaded to your computer have a read of the script in your prefered editor. All the information for executing the script will be in the script synopsis.
+The developement system this script was tested on used self signed CUCM certificates. To stop certificate errors, a Dot NET core class is used within the PowserShell script to overcome this error. This means you will need Dot NET installed on your target PC, or use signed certificates.
+If you decide to use signed certificates comment out lines 78 to 94 of the PowerShell script, then change the CUCM IP addresses for fully quailified domain names.
 
 ## Usage
 
